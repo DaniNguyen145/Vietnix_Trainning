@@ -1,6 +1,6 @@
-# XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
-<br>
-## Các thành phần cài đặt LEMP: 
+ XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
+
+Các thành phần cài đặt LEMP: 
 __L__inux
 __E__nginx làm webserver
 __M__ariaDB
