@@ -1,10 +1,10 @@
 # I.XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
 =====================================================
 ## Các thành phần cài đặt LEMP: 
-    __L__inux
-    __E__nginx làm webserver
-    __M__ariaDB
-    __P__HP 
+- **L**inux
+- **E**nginx làm webserver
+- **M**ariaDB
+- **P**HP 
 phpMyAdmin
 ### 1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
