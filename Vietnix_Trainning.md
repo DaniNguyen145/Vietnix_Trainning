@@ -5,26 +5,24 @@
 - **E**nginx làm webserver
 - **M**ariaDB
 - **P**HP 
-phpMyAdmin
+- phpMyAdmin
 ### 1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
 ### 2. Cập nhật host:
-    ```bash
     root@dian-aapanel-training:~# sudo apt-get update && apt-get upgrade -y
-    ```
 ### 3. Cài đặt Nginx trên VPS:
-    - Cài đặt Nginx:
-    bash
+- Cài đặt Nginx:
+    ```
     sudo apt-get install nginx-y       #Cài Nginx
-    
-    - Khởi động và kiểm tra trạng thái:
-    bash
+    ```
+- Khởi động và kiểm tra trạng thái:
+    ```
     root@dian-aapanel-training:~# sudo systemctl enable nginx      #Bật khởi động cùng hệ thống
     root@dian-aapanel-training:~# sudo systemctl start nginx       #Khởi động nginx
     root@dian-aapanel-training:~# sudo systemctl status nginx      #Kiểm tra trạng thái
-    '''
-    Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
-    '''
+    ```
+- Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
+    ```
      nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
      Active: __active (running)__ since Thu 2025-09-11 08:41:41 +07; 27min ago
@@ -42,24 +40,23 @@ phpMyAdmin
              ├─130279 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" >
              └─130280 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" >
         
-    '''
-    - Bây giờ bạn hãy truy cập IP trên trình duyệt. Nếu hiện như ảnh bên dưới là đã cài NGINX thành công.
+    ```
+- Bây giờ bạn hãy truy cập IP trên trình duyệt. Nếu hiện như ảnh bên dưới là đã cài NGINX thành công.
 	![Đăng nhập Nginx thành công](/home/dian/Ảnh/Chụp màn hình/2025-09-11_08-50.png)
 	
 ### 4. Cài đặt MariaDB trên VPS:
-VPS
-	- Cài đặt MariaDB:
-	'''
+- Cài đặt MariaDB:
+```
 	root@dian-aapanel-training:~# sudo apt install mariadb-server mariadb-client
-	'''
-	- Khởi động và kiểm tra trạng thái:
-	'''
+```
+- Khởi động và kiểm tra trạng thái:
+```
 	root@dian-aapanel-training:~# sudo systemctl enable mariadb    #Bật MariaDB
 	root@dian-aapanel-training:~# sudo systemctl start mariadb     #Khởi động MariaDB
 	root@dian-aapanel-training:~# sudo systemctl status mariadb     #Kiểm tra trạng thái
-	'''
-	Nếu bạn thấy hiển thị trạng thái active (running), thì MariaDB đang hoạt động
-	'''
+```
+- Nếu bạn thấy hiển thị trạng thái active (running), thì MariaDB đang hoạt động
+```
 	● mariadb.service - MariaDB 10.6.22 database server
      Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor prese>
      Active: active (running) since Thu 2025-09-11 08:41:41 +07; 45min ago
@@ -72,12 +69,12 @@ VPS
         CPU: 804ms
      CGroup: /system.slice/mariadb.service
              └─130328 /usr/sbin/mariadbd
-	'''
-	- Cấu hình MariaDB:
-	'''
+```
+- Cấu hình MariaDB:
+```
 	root@dian-aapanel-training:~# sudo mysql_secure_installation
-	'''
-	'''
+```
+```
     NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
       SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
 
@@ -138,24 +135,24 @@ VPS
     installation should now be secure.
 
     Thanks for using MariaDB!
-    '''
-    - Truy cập vào MariaDB monitor:
-    '''
+```
+- Truy cập vào MariaDB monitor:
+  ```
     root@dian-aapanel-training:~# __sudo mariadb -u root__ 
-    '''
-    Vậy là bạn đã cài đặt MariaDB thành công.
+  ```
+	- Vậy là bạn đã cài đặt MariaDB thành công.
 ### 5. Cài đặt PHP:
-    - Cài đặt PHP trên VPS (Khi chạy Wordpress hoặc Laravel)
-    '''
+- Cài đặt PHP trên VPS (Khi chạy Wordpress hoặc Laravel)
+    ```
      __sudo apt install php8.1 php8.1-fpm php8.1-mysql php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline php8.1-mbstring php8.1-xml php8.1-gd php8.1-curl php8.1-soap php8.1-mbstring -y__
-    '''
-    '''
+    ```
+    ```
     root@dian-aapanel-training:~# __systemctl enable php8.1-fpm__    #Bật PHP
     root@dian-aapanel-training:~# __systemctl start php8.1-fpm__     #Khởi động PHP
     root@dian-aapanel-training:~# __systemctl status php8.1-fpm__    #Kiểm tra PHP
-    '''
-    - Nếu bạn thấy hiển thị trạng thái __active (running)__, thì PHP đang hoạt động
-    '''
+    ```
+- Nếu bạn thấy hiển thị trạng thái __active (running)__, thì PHP đang hoạt động
+    ```
     ● php8.1-fpm.service - The PHP 8.1 FastCGI Process Manager
      Loaded: loaded (/lib/systemd/system/php8.1-fpm.service; enabled; vendor pr>
      Active: __active (running)__ since Thu 2025-09-11 10:11:26 +07; 25s ago
@@ -170,18 +167,18 @@ VPS
              ├─143410 "php-fpm: master process (/etc/php/8.1/fpm/php-fpm.conf)">
              ├─143411 "php-fpm: pool www" "" "" "" "" "" "" "" "" "" "" "" "" ">
              └─143412 "php-fpm: pool www" "" "" "" "" "" "" "" "" "" "" "" "" ">
-    '''
+    ```
 ### 6. Cài đặt phpMyAdmin:
-    '''
+    ```
     root@dian-aapanel-training:~# __sudo apt-get install phpmyadmin -y__
-    '''
-    - Sau khi chạy lệnh => chọn và điền các thông tin cần thiết. 
+    ```
+- Sau khi chạy lệnh => chọn và điền các thông tin cần thiết. 
     
-    - Đăng nhập vào MariaDB và kiểm tra phpmyadmin:
-    '''
+- Đăng nhập vào MariaDB và kiểm tra phpmyadmin:
+    ```
     root@dian-aapanel-training:~# __mysql -u root__
-    '''
-    '''
+    ```
+    ```
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
     Your MariaDB connection id is 49
     Server version: 10.6.22-MariaDB-0ubuntu0.22.04.1 Ubuntu 22.04
@@ -198,7 +195,7 @@ VPS
     | GRANT ALL PRIVILEGES ON `phpmyadmin`.* TO `phpmyadmin`@`localhost`                                                |
     +-------------------------------------------------------------------------------------------------------------------+
     2 rows in set (0.000 sec)
-    '''
+    ```
 ### 7. Cấu hình và cài đặt Wordpress và Lavarel:
 #### 1. Cài đặt Wordpress:
     - Tải và giải nén Wordpress:
