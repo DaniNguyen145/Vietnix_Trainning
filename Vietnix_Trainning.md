@@ -1,6 +1,6 @@
- XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
+#### XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
 
-Các thành phần cài đặt LEMP: 
+###Các thành phần cài đặt LEMP: 
 __L__inux
 __E__nginx làm webserver
 __M__ariaDB
@@ -9,21 +9,22 @@ phpMyAdmin
 ### 1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
 ### 2. Cập nhật host:
-    '''
+    
     root@dian-aapanel-training:~# sudo apt-get update && apt-get upgrade -y
-    '''
+    
 ### 3. Cài đặt Nginx trên VPS:
     - Cài đặt Nginx:
-    '''
+    bash
     sudo apt-get install nginx-y       #Cài Nginx
-    '''
+    
     - Khởi động và kiểm tra trạng thái:
+    bash	 
     root@dian-aapanel-training:~# sudo systemctl enable nginx      #Bật khởi động cùng hệ thống
     root@dian-aapanel-training:~# sudo systemctl start nginx       #Khởi động nginx
     root@dian-aapanel-training:~# sudo systemctl status nginx      #Kiểm tra trạng thái
-    '''
-    Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
-    '''
+    
+    - Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
+    bash
      nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
      Active: __active (running)__ since Thu 2025-09-11 08:41:41 +07; 27min ago
