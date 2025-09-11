@@ -1,10 +1,11 @@
 # I.XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
 ==========================================================================================================
-## Các thành phần cài đặt LEMP: 
-- **(L)**inux
-- **(E)**nginx làm webserver
-- **(M)**ariaDB
-- **(P)**HP 
+## Đĩnh nghĩa LEMP Stack:
+LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành phần Linux, Nginx (thường được phát âm là “Engine-X”), MySQL (hoặc MariaDB) và PHP (hoặc Python). Trong đó :
+- **L**inux : Là hệ điều hành nền tảng cho các phần mềm và dịch vụ chạy trên server.
+- **E**nginx : Là một web server và reverse proxy server, nổi bật với khả năng xử lý lượng lớn kết nối đồng thời mà không làm giảm hiệu suất.
+- **M**ariaDB : Là một hệ quản trị cơ sở dữ liệu quan hệ phổ biến, giúp lưu trữ và quản lý dữ liệu cho website.
+- **P**HP : Là ngôn ngữ lập trình được sử dụng để xử lý các logic và mã động trên server.
 - phpMyAdmin
 ### 1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
@@ -55,7 +56,7 @@
 	root@dian-aapanel-training:~# sudo systemctl start mariadb     #Khởi động MariaDB
 	root@dian-aapanel-training:~# sudo systemctl status mariadb     #Kiểm tra trạng thái
 ```
-- Nếu bạn thấy hiển thị trạng thái active (running), thì MariaDB đang hoạt động
+- Nếu bạn thấy hiển thị trạng thái **active (running)**, thì MariaDB đang hoạt động
 ```
 	● mariadb.service - MariaDB 10.6.22 database server
      Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor prese>
