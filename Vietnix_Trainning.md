@@ -1,10 +1,10 @@
 # I.XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
-=============================================================================
+=====================================================================================================================
 ## Các thành phần cài đặt LEMP: 
-- **L**inux
-- **E**nginx làm webserver
-- **M**ariaDB
-- **P**HP 
+- **(L)**inux
+- **(E)**nginx làm webserver
+- **(M)**ariaDB
+- **(P)**HP 
 - phpMyAdmin
 ### 1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
@@ -21,7 +21,7 @@
     root@dian-aapanel-training:~# sudo systemctl start nginx       #Khởi động nginx
     root@dian-aapanel-training:~# sudo systemctl status nginx      #Kiểm tra trạng thái
     ```
-- Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
+- Nếu bạn thấy hiển thị trạng thái **active (running)**, thì Ngin	inx đang hoạt động
     ```
      nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
@@ -51,7 +51,7 @@
 ```
 - Khởi động và kiểm tra trạng thái:
 ```
-	root@dian-aapanel-training:~# **sudo systemctl** enable mariadb    #Bật MariaDB
+	root@dian-aapanel-training:~# sudo systemctl enable mariadb    #Bật MariaDB
 	root@dian-aapanel-training:~# sudo systemctl start mariadb     #Khởi động MariaDB
 	root@dian-aapanel-training:~# sudo systemctl status mariadb     #Kiểm tra trạng thái
 ```
