@@ -42,7 +42,7 @@
         
     ```
 - Bây giờ bạn hãy truy cập IP trên trình duyệt. Nếu hiện như ảnh bên dưới là đã cài NGINX thành công.
-	![Đăng nhập Nginx thành công](/home/dian/Ảnh/Chụp màn hình/2025-09-11_08-50.png)
+	![Đăng nhập Nginx thành công](/Chụp màn hình/2025-09-11_08-50.png)
 	
 ### 4. Cài đặt MariaDB trên VPS:
 - Cài đặt MariaDB:
