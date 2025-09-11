@@ -251,10 +251,12 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
         }
     }
     ```
-- Sau đó truy cập vào đường dẫn :'http://wp.dian.vietnix.tech/' sẽ hiện giao diện của Wordpress. 
-    [Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-20.png)
+- Sau đó truy cập vào đường dẫn : http://wp.dian.vietnix.tech/ sẽ hiện giao diện của Wordpress. 
+
+  [Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-20.png)
 - Chọn ngôn ngữ và nhập thông tin chi tiết. 
-    [Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-35.png)
+
+  [Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-35.png)
 #### 2. Cài đặt Laravel:
 - Cài đặt Composer: 
     ```
