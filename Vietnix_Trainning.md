@@ -52,8 +52,8 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 ```
 - Khởi động và kiểm tra trạng thái:
 ```
-	root@dian-aapanel-training:~# sudo systemctl enable mariadb    #Bật MariaDB
-	root@dian-aapanel-training:~# sudo systemctl start mariadb     #Khởi động MariaDB
+	root@dian-aapanel-training:~# sudo systemctl enable mariadb     #Bật MariaDB
+	root@dian-aapanel-training:~# sudo systemctl start mariadb      #Khởi động MariaDB
 	root@dian-aapanel-training:~# sudo systemctl status mariadb     #Kiểm tra trạng thái
 ```
 - Nếu bạn thấy hiển thị trạng thái **active (running)**, thì MariaDB đang hoạt động
@@ -137,16 +137,29 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 
     Thanks for using MariaDB!
 ```
-- Truy cập vào MariaDB monitor:
+- Bạn có thể truy cập vào MariaDB monitor để kiểm tra mình đã cài đặt được chưa:
   ```
-    root@dian-aapanel-training:~# __sudo mariadb -u root__ 
+    root@dian-aapanel-training:~# sudo mariadb -u root
   ```
-	- Vậy là bạn đã cài đặt MariaDB thành công.
+  ```
+	Welcome to the MariaDB monitor.  Commands end with ; or \g.
+	Your MariaDB connection id is 115
+	Server version: 10.6.22-MariaDB-0ubuntu0.22.04.1 Ubuntu 22.04
+
+	Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+	Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+	MariaDB [(none)]> 
+
+  ```
+	- Nếu hiển thị như trên vậy là bạn đã cài đặt MariaDB thành công.
 ### 5. Cài đặt PHP:
 - Cài đặt PHP trên VPS (Khi chạy Wordpress hoặc Laravel)
     ```
-     __sudo apt install php8.1 php8.1-fpm php8.1-mysql php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline php8.1-mbstring php8.1-xml php8.1-gd php8.1-curl php8.1-soap php8.1-mbstring -y__
+     sudo apt install php8.1 php8.1-fpm php8.1-mysql php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline php8.1-mbstring php8.1-xml php8.1-gd php8.1-curl php8.1-soap php8.1-mbstring -y
     ```
+    Bật và kiểm tra PHP:
     ```
     root@dian-aapanel-training:~# __systemctl enable php8.1-fpm__    #Bật PHP
     root@dian-aapanel-training:~# __systemctl start php8.1-fpm__     #Khởi động PHP
@@ -171,13 +184,13 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     ```
 ### 6. Cài đặt phpMyAdmin:
     ```
-    root@dian-aapanel-training:~# __sudo apt-get install phpmyadmin -y__
+    root@dian-aapanel-training:~# sudo apt-get install phpmyadmin -y
     ```
 - Sau khi chạy lệnh => chọn và điền các thông tin cần thiết. 
     
 - Đăng nhập vào MariaDB và kiểm tra phpmyadmin:
     ```
-    root@dian-aapanel-training:~# __mysql -u root__
+    root@dian-aapanel-training:~# mysql -u root
     ```
     ```
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
