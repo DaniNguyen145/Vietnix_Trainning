@@ -183,9 +183,9 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
              └─143412 "php-fpm: pool www" "" "" "" "" "" "" "" "" "" "" "" "" ">
     ```
 ### 6. Cài đặt phpMyAdmin:
-    ```
+    
     root@dian-aapanel-training:~# sudo apt-get install phpmyadmin -y
-    ```
+    
 - Sau khi chạy lệnh => chọn và điền các thông tin cần thiết. 
     
 - Đăng nhập vào MariaDB và kiểm tra phpmyadmin:
@@ -256,14 +256,15 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 - Chọn ngôn ngữ và nhập thông tin chi tiết. 
     [Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-35.png)
 #### 2. Cài đặt Laravel:
-    - Cài đặt Composer: 
-    '''
+- Cài đặt Composer: 
+    ```
     sudo apt install  composer php php-curl php-bcmath php-json php-mysql php-mbstring php-xml php-tokenizer php-zip git -y
-    '''
-    - Kiểm tra phiên bản Composer đã cài đặt:
-    '''
+    ```
+- Kiểm tra phiên bản Composer đã cài đặt:
+    ```
     sudo -u www-data composer -v
-    '''
+    ```
+    ```
           ______
       / ____/___  ____ ___  ____  ____  ________  _____
      / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
@@ -271,13 +272,13 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     \____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
                         /_/
     Composer 2.2.6 2022-02-04 17:00:38
-    '''
+    ```
 - Cấu hình cho Lavarel:
-    '''
-    sudo nano /etc/nginx/sites-available/laravel.tule.vietnix.tech
-    '''
+    ```
+    sudo nano /etc/nginx/sites-available/laravel
+    ```
 - Sao chép nội dung file cấu hình dưới đây vào:
-    bash
+    ```
         server {
         listen 80;
         server_name laravel.dian.vietnix.tech;  #Thay đổi bằng domain của bạn
@@ -299,27 +300,26 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
             deny all;
         }
         }
-    
-    - Kích hoạt site và khởi động lại Nginx:
-    bash
+	```    
+- Kích hoạt site và khởi động lại Nginx:
+    ```
     ln -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/
     nginx -t
     systemctl restart nginx
-    
-    - Sau khi khởi động lại, có thể kiểm tra lại bằng file info.php
-    '''
+    ```
+- Sau khi khởi động lại, có thể kiểm tra lại bằng file info.php
+    ```
     echo "<?php phpinfo();" > /var/www/laravel/public/info.php
-
-    '''
-    - Truy cập vào trang thử:'http://laravel.dian.vietnix.tech/info.php'
+	```
+- Truy cập vào trang thử:'http://laravel.dian.vietnix.tech/info.php'
     ![Giao diện thử lavarel](/hChụp%20màn%20hình/2025-09-11_14-34.png)
     
     Nếu thấy có thông tin php thì chứng tỏ website laravel đã hoạt động.
 
-    - Bạn có thể truy cập vào trang lavarel của bạn:'http://laravel.dian.vietnix.tech/'
+- Bạn có thể truy cập vào trang lavarel của bạn:'http://laravel.dian.vietnix.tech/'
     ![Giao diện lavarel](/Chụp%20màn%20hình/2025-09-11_14-21.png)
-    
-## Cài SSL cho 2 domain với ZeroSSL
+
+# II.Cài SSL cho 2 domain với ZeroSSL
 - Truy cập vào'https://www.sslforfree.com/' để đăng ký tài khoản.
     ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_14-51.png)
 - Tạo Certificate và chọn thời hạn SSL:
@@ -332,25 +332,24 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     ![Giao diện](/Chụp%20màn%20hình/2025-09-11_15-24.png)
     ```
     mkdir -p /etc/nginx/ssl/laravel
-
     ```
-    - Copy 3 file vào thư mục:
-  ```
+- Copy 3 file vào thư mục:
+  	```
     cp certificate.crt /etc/nginx/ssl/laravel/
     cp ca_bundle.crt /etc/nginx/ssl/laravel/
     cp private.key /etc/nginx/ssl/laravel/
 
-  ```
-    - Gộp 2 file certificate.crt và ca_bundle.crt thành 1 file '.crt'
-    '''
+  	```
+- Gộp 2 file certificate.crt và ca_bundle.crt thành 1 file '.crt'
+	```
     cat certificate.crt ca_bundle.crt > /etc/nginx/ssl/laravel/fullchain.crt
 
-    '''
-    - Chỉnh sửa config Nginx cho domain: 
-    '''
+    ```
+- Chỉnh sửa config Nginx cho domain: 
+  	```
     nano /etc/nginx/sites-available/laravel
-    '''
-    '''
+    ```
+    
 
 
 
