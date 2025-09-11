@@ -6,7 +6,7 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 - **E**nginx : Là một web server và reverse proxy server, nổi bật với khả năng xử lý lượng lớn kết nối đồng thời mà không làm giảm hiệu suất.
 - **M**ariaDB : Là một hệ quản trị cơ sở dữ liệu quan hệ phổ biến, giúp lưu trữ và quản lý dữ liệu cho website.
 - **P**HP : Là ngôn ngữ lập trình được sử dụng để xử lý các logic và mã động trên server.
-- phpMyAdmin
+## Cách cài đặt LEMP:
 ### 1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
 ### 2. Cập nhật host:
