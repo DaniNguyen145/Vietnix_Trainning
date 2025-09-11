@@ -41,8 +41,8 @@
              └─130280 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" >
         
     ```
-- Bây giờ bạn hãy truy cập IP trên trình duyệt. Nếu hiện như ảnh bên dưới là đã cài NGINX thành công.
-	![Đăng nhập Nginx thành công](/Chụp màn hình/2025-09-11_08-50.png)
+- Bây giờ bạn hãy truy cập IP trên trình duyệt. Nếu hiện như ảnh bên dưới là đã cài Nginx thành công.
+  [Đăng nhập Nginx thành công](/Chụp màn hình/2025-09-11_08-50.png)
 	
 ### 4. Cài đặt MariaDB trên VPS:
 - Cài đặt MariaDB:
@@ -198,21 +198,23 @@
     ```
 ### 7. Cấu hình và cài đặt Wordpress và Lavarel:
 #### 1. Cài đặt Wordpress:
-    - Tải và giải nén Wordpress:
-    '''
+- Tải và giải nén Wordpress:
+    ```
      cd /tmp
     wget https://wordpress.org/latest.tar.gz
     tar -xzvf latest.tar.gz
     sudo mv /tmp/wordpress /var/www/wordpress
-    '''
-    - Phân quyền:
-    '''
+   ```
+- Phân quyền:
+    ```
     chown -R www-data:www-data /var/www/wordpress
     chmod -R 755 /var/www/wordpress
-    '''
-    - Cấu hình cho Wordpress:
+    ```
+- Cấu hình cho Wordpress:
+  ```
     nano /etc/nginx/sites-available/wordpress.conf
-    '''
+    ```
+  ```
         server {
         listen 80;
         server_name wp.dian.vietnix.tech;
@@ -234,11 +236,11 @@
             deny all;
         }
     }
-    '''
-    - Sau đó truy cập vào đường dẫn :'http://wp.dian.vietnix.tech/' sẽ hiện giao diện của Wordpress. 
-    ![Giao diện Wordpress](/home/dian/Ảnh/Chụp màn hình/2025-09-11_11-20.png)
-    - Chọn ngôn ngữ và nhập thông tin chi tiết. 
-    ![Giao diện Wordpress](/home/dian/Ảnh/Chụp màn hình/2025-09-11_11-35.png)
+    ```
+- Sau đó truy cập vào đường dẫn :'http://wp.dian.vietnix.tech/' sẽ hiện giao diện của Wordpress. 
+    [Giao diện Wordpress](/Chụp màn hình/2025-09-11_11-20.png)
+- Chọn ngôn ngữ và nhập thông tin chi tiết. 
+    [Giao diện Wordpress](/Chụp màn hình/2025-09-11_11-35.png)
 #### 2. Cài đặt Laravel:
     - Cài đặt Composer: 
     '''
