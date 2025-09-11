@@ -347,13 +347,46 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     cat certificate.crt ca_bundle.crt > /etc/nginx/ssl/laravel/fullchain.crt
 
     ```
-- Chỉnh sửa config Nginx cho domain: 
+- Chỉnh sửa cấu hình file: 
   	```
     nano /etc/nginx/sites-available/laravel
     ```
-    
+    ```
+    server {
+    listen 80;
+    server_name laravel.dian.vietnix.tech;
+    return 301 https://$host$request_uri;
+	}
 
+	server {
+    listen 443 ssl;
+    server_name laravel.dian.vietnix.tech;
 
+    ssl_certificate     /etc/nginx/ssl/laravel/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/laravel/private.key;
+
+    root /var/www/laravel/public;
+    index index.php index.html;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;   # nhớ đổi đúng versio>
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+  }
+	```
+- Kiểm tra và khởi động lại Nginx:
+  ```
+    sudo nginx -t
+ 	sudo systemctl restart nginx
+  ```
+![Giao diện Laravel]()
+![Giao diện WordPres]()
+  
 
 
 
