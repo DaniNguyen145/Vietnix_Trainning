@@ -51,7 +51,7 @@
 ```
 - Khởi động và kiểm tra trạng thái:
 ```
-	root@dian-aapanel-training:~# sudo systemctl enable mariadb    #Bật MariaDB
+	root@dian-aapanel-training:~# **sudo systemctl** enable mariadb    #Bật MariaDB
 	root@dian-aapanel-training:~# sudo systemctl start mariadb     #Khởi động MariaDB
 	root@dian-aapanel-training:~# sudo systemctl status mariadb     #Kiểm tra trạng thái
 ```
