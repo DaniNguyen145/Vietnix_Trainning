@@ -1,30 +1,29 @@
-#### XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
-
-### Các thành phần cài đặt LEMP: 
-- **L**_inux
-- **E**nginx làm webserver
-**M**ariaDB
-**P**HP 
+####I.XÂY DỰNG MÔ HÌNH LEMP, WEBSITE WORDPRESS, LARAVEL
+###Các thành phần cài đặt LEMP: 
+    __L__inux
+    __E__nginx làm webserver
+    __M__ariaDB
+    __P__HP 
 phpMyAdmin
-### 1. SSH vào VPS:
+1. SSH vào VPS:
     ssh [name_host]@[your_host_IP]
 ### 2. Cập nhật host:
-    
+    ```bash
     root@dian-aapanel-training:~# sudo apt-get update && apt-get upgrade -y
-    
+    ```
 ### 3. Cài đặt Nginx trên VPS:
     - Cài đặt Nginx:
     bash
     sudo apt-get install nginx-y       #Cài Nginx
     
     - Khởi động và kiểm tra trạng thái:
-    bash	 
+    bash
     root@dian-aapanel-training:~# sudo systemctl enable nginx      #Bật khởi động cùng hệ thống
     root@dian-aapanel-training:~# sudo systemctl start nginx       #Khởi động nginx
     root@dian-aapanel-training:~# sudo systemctl status nginx      #Kiểm tra trạng thái
-    
-    - Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
-    bash
+    '''
+    Nếu bạn thấy hiển thị trạng thái active (running), thì Ngin	inx đang hoạt động
+    '''
      nginx.service - A high performance web server and a reverse proxy server
      Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
      Active: __active (running)__ since Thu 2025-09-11 08:41:41 +07; 27min ago
@@ -259,4 +258,87 @@ VPS
                         /_/
     Composer 2.2.6 2022-02-04 17:00:38
     '''
+    - Cấu hình cho Lavarel:
+    '''
+    sudo nano /etc/nginx/sites-available/laravel.tule.vietnix.tech
+    '''
+    - Sao chép nội dung file cấu hình dưới đây vào:
+    bash
+        server {
+        listen 80;
+        server_name laravel.dian.vietnix.tech;  #Thay đổi bằng domain của bạn
+
+        root /var/www/laravel/public;
+        index index.php index.html;
+
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location ~ \.php$ {
+            include snippets/fastcgi-php.conf;
+            fastcgi_pass unix:/run/php/php8.1-fpm.sock;   # đổi đúng version PHP bạn cài
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        }
+
+        location ~ /\.ht {
+            deny all;
+        }
+        }
+    
+    - Kích hoạt site và khởi động lại Nginx:
+    bash
+    ln -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/
+    nginx -t
+    systemctl restart nginx
+    
+    - Sau khi khởi động lại, có thể kiểm tra lại bằng file info.php
+    '''
+    echo "<?php phpinfo();" > /var/www/laravel/public/info.php
+
+    '''
+    - Truy cập vào trang thử:'http://laravel.dian.vietnix.tech/info.php'
+    ![Giao diện thử lavarel](/home/dian/Ảnh/Chụp màn hình/2025-09-11_14-34.png)
+    
+    Nếu thấy có thông tin php thì chứng tỏ website laravel đã hoạt động.
+
+    - Bạn có thể truy cập vào trang lavarel của bạn:'http://laravel.dian.vietnix.tech/'
+    ![Giao diện lavarel](/home/dian/Ảnh/Chụp màn hình/2025-09-11_14-21.png)
+    
+#Cài SSL cho 2 domain với ZeroSSL
+    - Truy cập vào'https://www.sslforfree.com/' để đăng ký tài khoản.
+    ![Giao diện ZeroSSL](/home/dian/Ảnh/Chụp màn hình/2025-09-11_14-51.png)
+    - Tạo Certificate và chọn thời hạn SSL:
+    ![Giao diện ZeroSSL](/home/dian/Ảnh/Chụp màn hình/2025-09-11_15-00.png)
+    - Xác thực tên miền bằng cách upload file: 
+    ![Giao diện xác thực](/home/dian/Ảnh/Chụp màn hình/1.png)
+    - Làm theo hướng dẫn và tải file chứng chỉ:
+    ![Giao diện xác thực](/home/dian/Ảnh/Chụp màn hình/2025-09-11_15-20.png)
+    - Giải nén file và tạo thư mục lưu chứng chỉ:
+    ![Giao diện](/home/dian/Ảnh/Chụp màn hình/2025-09-11_15-24.png)
+    '''
+    mkdir -p /etc/nginx/ssl/laravel
+
+    '''
+    - Copy 3 file vào thư mục:
+    '''
+    cp certificate.crt /etc/nginx/ssl/laravel/
+    cp ca_bundle.crt /etc/nginx/ssl/laravel/
+    cp private.key /etc/nginx/ssl/laravel/
+
+    '''
+    - Gộp 2 file certificate.crt và ca_bundle.crt thành 1 file '.crt'
+    '''
+    cat certificate.crt ca_bundle.crt > /etc/nginx/ssl/laravel/fullchain.crt
+
+    '''
+    - Chỉnh sửa config Nginx cho domain: 
+    '''
+    nano /etc/nginx/sites-available/laravel
+    '''
+    '''
+
+
+
+
 
