@@ -384,8 +384,8 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     sudo nginx -t
  	sudo systemctl restart nginx
   ```
-![Giao diện Laravel]()
-![Giao diện WordPres]()
+![Giao diện Laravel](Chụp màn hình/2025-09-12_06-47.png)
+![Giao diện WordPres](Chụp màn hình/2025-09-12_06-47_1.png)
   
 
 
