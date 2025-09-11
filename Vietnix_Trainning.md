@@ -325,6 +325,7 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 - Truy cập vào'https://www.sslforfree.com/' để đăng ký tài khoản.
     ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_14-51.png)
 - Tạo Certificate và chọn thời hạn SSL:
+- 
     ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_15-00.png)
 - Xác thực tên miền bằng cách upload file: 
     ![Giao diện xác thực](/Chụp%20màn%20hình/1.png)
@@ -384,6 +385,8 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     sudo nginx -t
  	sudo systemctl restart nginx
   ```
+- Hãy truy cập lại trang và kiểm tra
+- 
 ![Giao diện Laravel](/Chụp%20màn%20hình/2025-09-12_06-47.png)
 
 ![Giao diện WordPres](/Chụp%20màn%20hình/2025-09-12_06-47_1.png)
