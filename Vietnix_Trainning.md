@@ -425,4 +425,4 @@ ______________________________
    ```
 - Dùng FileZilla hoặc WinSCP, để kiểm tra:
 
-
+ 	![Giao diện FileZilla](/Chụp%20màn%20hình/2025-09-12_06-47_10.png)
