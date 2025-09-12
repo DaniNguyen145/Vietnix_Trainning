@@ -394,7 +394,35 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 
 ______________________________
 ![Giao diện WordPres](/Chụp%20màn%20hình/2025-09-12_06-47_1.png)
-  
 
+## III.Tạo tài khoản FTP
+- Cập nhật và cài đặt FTP:
+	```
+  	apt update
+	apt install vsftpd -y
+ 	```
+ - Tạo user FTP:
+	```
+    adduser ftpuser
+	```
+ 	Nhập các thông tin cần thiết.
+ - Cấu hình vsftpd:
+   	```
+    nano /etc/vsftpd.conf
+
+    ```
+    Sửa các dòng sau (bỏ dấu # nếu có):
+	```
+	write_enable=YES
+	chroot_local_user=YES
+ 	allow_writeable_chroot=YES
+ 
+ 	```
+ - Khởi động lại dịch vụ:
+   ```
+	systemctl restart vsftpd
+	systemctl enable vsftpd
+   ```
+- Dùng FileZilla hoặc WinSCP, để kiểm tra:
 
 
