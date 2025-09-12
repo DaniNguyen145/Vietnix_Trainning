@@ -324,8 +324,8 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
 # II.Cài SSL cho 2 domain với ZeroSSL
 - Truy cập vào'https://www.sslforfree.com/' để đăng ký tài khoản.
     ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_14-51.png)
-- Tạo Certificate và chọn thời hạn SSL:
-- 
+- Tạo Certificate mới cho SSL:
+ 
     ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_15-00.png)
 - Xác thực tên miền bằng cách upload file: 
     ![Giao diện xác thực](/Chụp%20màn%20hình/1.png)
