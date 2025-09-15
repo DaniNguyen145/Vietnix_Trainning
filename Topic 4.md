@@ -52,7 +52,7 @@
     Nếu thấy hiển thị active(running) thì apache đã chạy rồi, có thể truy cập vào Ip để kiểm tra
     ![Giao diện](/Chụp20%màn20%hình/2025-09-12_11-23.png)
     
-### Sử dụng Vhost để xây dựng dựng 2 website
+### Sử dụng Vhost để xây dựng 2 website
 - Cấu hình Apache: 
     - **WordPress** – /etc/apache2/sites-available/wp.conf
     ```
