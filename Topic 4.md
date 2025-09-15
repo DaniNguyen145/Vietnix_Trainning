@@ -27,7 +27,7 @@
     
     
 - Để apache chạy được thì chúng ta phải đổi port để 2 webserver không trùng nhau
-    ![](/home/dian/Ảnh/Chụp màn hình/2025-09-12_15-11.png)
+    ![](/Chụp20%màn20%hình/2025-09-12_15-11.png)
 - Khởi động lại apache:
     ```
      sudo systemctl restart apache2
@@ -50,7 +50,7 @@
 
     ```
     Nếu thấy hiển thị active(running) thì apache đã chạy rồi, có thể truy cập vào Ip để kiểm tra
-    ![](/home/dian/Ảnh/Chụp màn hình/2025-09-12_11-23.png)
+    ![](/Chụp20%màn20%hình/2025-09-12_11-23.png)
     
 ### Sử dụng Vhost để xây dựng dựng 2 website
 - Cấu hình Apache: 
