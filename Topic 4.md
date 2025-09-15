@@ -306,3 +306,47 @@
   ![Defaulthost](Chup_man_hinh/2025-09-15_09-55.png)
   ![Defaulthost](Chup_man_hinh/2025-09-15_10-31.png)
 ## Upload source code
+- Người dùng tiến hành uppload source code lên VPS có thể sử dụng FTP và Unzip file vừa upload:
+  ![Ftp](Chup_man_hinh/2025-09-16_05-26.png)
+  ![](Chup_man_hinh/2025-09-16_05-31.png)
+- Upload database vào mysql và kiểm tra lại:
+  ![](Chup_man_hinh/2025-09-15_11-49.png)
+  ![](Chup_man_hinh/2025-09-15_11-50.png)
+- Đổi các doamin có sẵn trong DB về đúng domain:
+  ```
+        
+    UPDATE `Sa3QIZ_options` 
+    SET `option_value` = REPLACE(option_value, 'https://linhlt.id.vn', 'https://wp.dian.vietnix.tech')
+    WHERE `option_name` IN ('siteurl','home');
+    
+ 
+    UPDATE `Sa3QIZ_postmeta` 
+    SET `meta_value` = REPLACE(meta_value, 'https://linhlt.id.vn', 'https://wp.dian.vietnix.tech')
+    WHERE `meta_value` LIKE '%linhlt.id.vn%';
+    
+ 
+    UPDATE `Sa3QIZ_posts`
+    SET `post_content` = REPLACE(post_content, 'https://linhlt.id.vn', 'https://wp.dian.vietnix.tech')
+    WHERE `post_content` LIKE '%linhlt.id.vn%';
+    
+   
+    UPDATE `Sa3QIZ_posts`
+    SET `guid` = REPLACE(guid, 'https://linhlt.id.vn', 'https://wp.dian.vietnix.tech')
+    WHERE guid LIKE '%linhlt.id.vn%';
+
+  ```
+- Tạo file .env
+    ```
+      cd /var/www/laravel.dian.vietnix.tech/
+      nano .env   
+    ```
+  - Thay đổi đường dẫn URL:
+    ![](Chup_man_hinh/2025-09-16_05-54.png)
+- Cấp quyền user trong database:
+  ```
+    GRANT ALL PRIVILEGES ON linhlt_db.* TO 'dian'@'localhost';
+    FLUSH PRIVILEGES
+  ```
+
+- Truy cập trang web và kiểm tra thử đã upload thành công chưa:
+    ![](Chup_man_hinh/2025-09-15_16-34.png)
