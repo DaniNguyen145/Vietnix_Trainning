@@ -236,8 +236,8 @@
 
     ```
 - Kiểm thử website Wordpress:
-  http://wp.dian.vietnix.tech:8080 → WordPress chạy
-  https://wp.dian.vietnix.tech:8888 → WordPress chạy với SSL (cảnh báo Không bảo mật)
+  - http://wp.dian.vietnix.tech:8080 → WordPress chạy
+  - https://wp.dian.vietnix.tech:8888 → WordPress chạy với SSL (cảnh báo Không bảo mật)
 
-  ![Wp]()
-  ![Wp]()
+  ![Wp](Chụp20%màn20%hình/2025-09-13_11-55.png)
+  ![Wp](Chụp20%màn20%hình/2025-09-13_11-55_1.png)
