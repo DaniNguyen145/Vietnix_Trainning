@@ -235,4 +235,9 @@
     sudo systemctl reload nginx
 
     ```
-    
+- Kiểm thử website Wordpress:
+  http://wp.dian.vietnix.tech:8080 → WordPress chạy
+  https://wp.dian.vietnix.tech:8888 → WordPress chạy với SSL (cảnh báo Không bảo mật)
+
+  ![Wp]()
+  ![Wp]()
