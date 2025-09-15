@@ -27,7 +27,7 @@
     
     
 - Để apache chạy được thì chúng ta phải đổi port để 2 webserver không trùng nhau
-    ![Giao diện](/Chụp20%màn20%hình/2025-09-12_15-11.png)
+    ![Thay đổi port](/Chụp20%màn20%hình/2025-09-12_15-11.png)
 - Khởi động lại apache:
     ```
      sudo systemctl restart apache2
@@ -50,7 +50,7 @@
 
     ```
     Nếu thấy hiển thị active(running) thì apache đã chạy rồi, có thể truy cập vào Ip để kiểm tra
-    ![Giao diện](/Chụp20%màn20%hình/2025-09-12_11-23.png)
+    ![Truy cập lại IP](/Chụp20%màn20%hình/2025-09-12_11-23.png)
     
 ### Sử dụng Vhost để xây dựng 2 website
 - Cấu hình Apache: 
@@ -239,5 +239,5 @@
   - http://wp.dian.vietnix.tech:8080 → WordPress chạy
   - https://wp.dian.vietnix.tech:8888 → WordPress chạy với SSL (cảnh báo Không bảo mật)
 
-  ![Wp](Chụp20%màn20%hình/2025-09-13_11-55.png)
+  ![Wp1](Chụp20%màn20%hình/2025-09-13_11-55.png)
   ![Wp](Chụp20%màn20%hình/2025-09-13_11-55_1.png)
