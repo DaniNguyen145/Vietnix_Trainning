@@ -252,7 +252,7 @@
 - Tạo thư mục và file nội dung mặc định:
   ```
     sudo mkdir -p /var/www/default
-    echo "<h1>DAY LA DEFAULT VHOST CUA NGINX</h1>" | sudo tee /var/www/default/index.html
+    echo "<h1>DAY LA DEFAULT VHOST </h1>" | sudo tee /var/www/default/index.html
     sudo chown -R www-data:www-data /var/www/default
 
   ```
@@ -305,3 +305,4 @@
 
   ![Defaulthost](Chup_man_hinh/2025-09-15_09-55.png)
   ![Defaulthost](Chup_man_hinh/2025-09-15_10-31.png)
+## Upload source code
