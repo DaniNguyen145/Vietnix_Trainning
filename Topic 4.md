@@ -50,7 +50,7 @@
 
     ```
     Nếu thấy hiển thị active(running) thì apache đã chạy rồi, có thể truy cập vào Ip để kiểm tra
-    ![Truy cập lại IP](/Chụp20%màn20%hình/2025-09-12_11-23.png)
+    ![Truy cập lại IP](/Chup_man_hinh/2025-09-12_11-23.png)
     
 ### Sử dụng Vhost để xây dựng 2 website
 - Cấu hình Apache: 
