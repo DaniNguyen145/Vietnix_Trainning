@@ -1,13 +1,13 @@
 # TOPIC 4:
 ## Xây dựng mô hình reverse proxy kết hợp giữa 2 webserver 'Nginx' và 'Apache': 
 ### Cài đặt apache:
-    - Cập nhật hệ thống và cài Apache:
+- Cập nhật hệ thống và cài Apache:
     ```
     sudo apt update && sudo apt upgrade -y      #Cập nhật hệ thống
     sudo apt install apache2 -y                 #Cài Apache
     sudo systemctl status apache2               #Kiểm tra trạng thái ApacheApache
     ```
-    - Sau khi kiểm tra trạng thái nếu màn hình hiển thị Active: failed
+- Sau khi kiểm tra trạng thái nếu màn hình hiển thị Active: failed
     ```
      × apache2.service - The Apache HTTP Server
      Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
@@ -19,16 +19,16 @@
     Sep 12 10:33:53 dian-aapanel-training apachectl[166388]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
     Sep 12 10:33:53 dian-aapanel-training apachectl[166388]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
     ```
-    - Apache không khởi động được vì cổng 80 đã bị Nginx chiếm (Address already in use).
+- Apache không khởi động được vì cổng 80 đã bị Nginx chiếm (Address already in use).
         Đây là lý do khi xây dựng mô hình reverse proxy thì:
         **Nginx** đứng trước, chiếm cổng 80/443 để nhận request từ client. Nginx có thể xử lý hàng chục nghìn kết nối đồng thời, phục vụ nội dung tĩnh (CSS, JS, hình ảnh, video) cực nhanh và giảm tải đáng kể cho backend. Và những request động sẽ được Nginx proxy_pass về Apache
         **Apache** chạy sau, . Khi đó, Apache chỉ tập trung xử lý các ứng dụng web như PHP, WordPress hay Laravel, thay vì phải gánh toàn bộ kết nối và file tĩnh. Và trả response lại cho Nginx, rồi Nginx trả kết quả đó lại cho client.
         Apache tốt hơn Nginx trong việc phục vụ các trang web động, nhưng Nginx lại tốt hơn Apache trong việc phục vụ các trang web tĩnh. Do đó, để tận dụng ưu thế của cả 2 web server này, khái niệm reverse proxy đã ra đời.
     
     
-    - Để apache chạy được thì chúng ta phải đổi port để 2 webserver không trùng nhau
+- Để apache chạy được thì chúng ta phải đổi port để 2 webserver không trùng nhau
     ![](/home/dian/Ảnh/Chụp màn hình/2025-09-12_15-11.png)
-    - Khởi động lại apache:
+- Khởi động lại apache:
     ```
      sudo systemctl restart apache2
      sudo systemctl status apache2
