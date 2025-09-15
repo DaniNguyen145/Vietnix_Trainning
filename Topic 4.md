@@ -49,7 +49,8 @@
                  └─168392 /usr/sbin/apache2 -k start
 
     ```
-    Nếu thấy hiển thị active(running) thì apache đã chạy rồi, có thể truy cập vào Ip để kiểm tra
+    - Nếu thấy hiển thị active(running) thì apache đã chạy rồi, có thể truy cập vào Ip để kiểm tra
+    
     ![Truy cập lại IP](/Chup_man_hinh/2025-09-12_11-23.png)
     
 ### Sử dụng Vhost để xây dựng 2 website
@@ -239,5 +240,5 @@
   - http://wp.dian.vietnix.tech:8080 → WordPress chạy
   - https://wp.dian.vietnix.tech:8888 → WordPress chạy với SSL (cảnh báo Không bảo mật)
 
-  ![Wp1](Chụp20%màn20%hình/2025-09-13_11-55.png)
-  ![Wp](Chụp20%màn20%hình/2025-09-13_11-55_1.png)
+  ![Wp1](/Chup_man_hinh/2025-09-13_11-55.png)
+  ![Wp](/Chup_man_hinh/2025-09-13_11-55_1.png)
