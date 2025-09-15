@@ -304,4 +304,4 @@
   ```
 
   ![Defaulthost](Chup_man_hinh/2025-09-15_09-55.png)
-  ![Defaulthost](Chup_man_hinh/2025-09-15_09-59.png)
+  ![Defaulthost](Chup_man_hinh/2025-09-15_10-31.png)
