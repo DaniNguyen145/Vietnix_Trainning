@@ -242,3 +242,66 @@
 
   ![Wp1](/Chup_man_hinh/2025-09-13_11-55.png)
   ![Wp](/Chup_man_hinh/2025-09-13_11-55_1.png)
+- Kiểm thử website Laravel:
+  - https://laravel.dian.vietnix.tech:8888 → Laravel chạy
+  - http://laravel.dian.vietnix.tech:8080 → Laravel chạy với SSL (cảnh báo Không bảo mật)
+
+  ![Lavarel](Chup_man_hinh/2025-09-15_09-36.png)
+  ![Lavarel](Chup_man_hinh/2025-09-15_09-41_1.png)
+### Tạo default host:
+- Tạo thư mục và file nội dung mặc định:
+  ```
+    sudo mkdir -p /var/www/default
+    echo "<h1>DAY LA DEFAULT VHOST CUA NGINX</h1>" | sudo tee /var/www/default/index.html
+    sudo chown -R www-data:www-data /var/www/default
+
+  ```
+- Cấu hình default vhost cho Nginx: /etc/nginx/sites-available/default
+  ```
+    server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/default;
+    index index.html;
+    server_name _;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    }
+
+    server {
+    listen 443 ssl default_server;
+    listen [::]:443 ssl default_server;
+
+    root /var/www/default;
+    index index.html;
+    server_name _;
+
+    ssl_certificate     /etc/nginx/ssl/default/fullchain.crt;
+    ssl_certificate_key /etc/nginx/ssl/default/privkey.key;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    }
+
+  ```
+- Tạo chứng chỉ tự ký (self-signed):
+  ```
+    sudo mkdir -p /etc/nginx/ssl/default
+    sudo openssl req -x509 -nodes -days 365 \
+  -newkey rsa:2048 \
+  -keyout /etc/nginx/ssl/default/privkey.key \
+  -out /etc/nginx/ssl/default/fullchain.crt
+
+  ```
+- Kích hoạt và kiểm tra: 
+  ```
+    sudo nginx -t
+    sudo systemctl reload nginx
+  ```
+
+  ![Defaulthost](Chup_man_hinh/2025-09-15_09-55.png)
+  ![Defaulthost](Chup_man_hinh/2025-09-15_09-59.png)
