@@ -27,7 +27,7 @@
     
     
 - Để apache chạy được thì chúng ta phải đổi port để 2 webserver không trùng nhau
-    ![Thay đổi port](/Chụp20%màn20%hình/2025-09-12_15-11.png)
+    ![Thay đổi port](/Chup_man_hinh/2025-09-12_15-11.png)
 - Khởi động lại apache:
     ```
      sudo systemctl restart apache2
