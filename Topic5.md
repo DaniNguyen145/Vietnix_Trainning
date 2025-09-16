@@ -8,11 +8,11 @@
   - **cPanel** hoạt động dựa trên một hệ thống phân cấp ba lớp: Nhà cung cấp dịch vụ hosting (Hosting Company), Đại lý bán lại (Reseller) và Người dùng cuối (End User). Cả Hosting Company và Reseller đều sử dụng giao diện Web Host Manager (WHM) để quản lý máy chủ, trong khi End User tương tác trực tiếp với giao diện cPanel.
 
 ### Tính năng cơ bản của cPanel:
-  1. Dashboard (Trang chính)
+-  Dashboard (Trang chính)
     - Thống kê tài nguyên: CPU, RAM, dung lượng ổ cứng, băng thông.
     - Các shortcut: File Manager, Email, Domain, SSL/TLS, Databases.
   
-  2. Quản lý tập tin
+-  Quản lý tập tin
     - File Manager (Trình quản lý file): Cho phép người dùng truy cập, tạo, chỉnh sửa và xóa file trực tiếp trên hosting mà không cần sử dụng FTP.
     - Disk Usage (Theo dõi dung lượng ổ cứng): Cung cấp giao diện trực quan để giám sát và quản lý việc sử dụng dung lượng ổ cứng.
     - Backup and Backup Wizard (Backup và restore dữ liệu): Hỗ trợ sao lưu dữ liệu trên web hosting một cách dễ dàng, giúp khôi phục dữ liệu khi cần thiết.
@@ -21,13 +21,13 @@
     - Directory Privacy (Thư mục bảo mật): Tăng cường bảo mật bằng cách đặt mật khẩu cho thư mục.
     - FTP Accounts (Tài khoản FTP): Hỗ trợ quản lý và thêm tài khoản FTP dễ dàng.
 
-  3. Quản lý cơ sở dữ liệu
+-  Quản lý cơ sở dữ liệu
     - phpMyAdmin: Giao diện web phổ biến, giúp quản trị cơ sở dữ liệu MySQL một cách trực quan và dễ dàng.
     - Remote Database Access: Cho phép kết nối và truy cập đến cơ sở dữ liệu từ xa, hỗ trợ các ứng dụng trên máy chủ khác sử dụng chung dữ liệu.
     - Manage My Databases: Cung cấp giao diện quản lý toàn diện các cơ sở dữ liệu trên website, bao gồm việc tạo, chỉnh sửa và quản lý tài khoản người dùng cơ sở dữ liệu.
     - Database Wizard: Hỗ trợ tạo và quản lý cơ sở dữ liệu trên cPanel nhanh chóng.
     
-  4. Quản lý tên miền
+-  Quản lý tên miền
     - Site Publisher (Trình xuất bản trang web): Cho phép tạo trang web đơn giản hoặc trang chờ trong khi phát triển website chính.
     - Redirects (Chuyển hướng): Dễ dàng thiết lập chuyển hướng từ URL này sang URL khác.
     - Zone Editor: Kiểm soát và quản lý các bản ghi DNS, chẳng hạn như A record, CNAME record,…
@@ -36,19 +36,19 @@
     - WordPress Managment (WP Toolkit): Cung cấp các công cụ để cài đặt, cập nhật và quản lý theme, plugin cũng như website WordPress.
     - Domains: Cho phép tạo và quản lý các tên miền phụ (subdomain), tên miền alias và tên miền addon.
 
-  5. Tính năng email
+  -  Tính năng email
     - Email Accounts (Quản lý tài khoản email): Dễ dàng thiết lập, quản lý và kiểm soát các tài khoản email.
     - Autoresponders (Trả lời tự động): Gửi phản hồi tự động đến các email nhận được, hữu ích cho việc thông báo vắng mặt.
     - Track Delivery (Theo dõi hành trình email): Giám sát quá trình gửi email.
 
-  6. Tính năng bảo mật
+  -  Tính năng bảo mật
     - SSH Access (Truy cập SSH): Kết nối an toàn đến máy chủ thông qua dòng lệnh.
     - IP Blocker (Trình chặn IP): Chặn truy cập từ các địa chỉ IP cụ thể.
     - Two-Factor Authentication (Xác thực hai yếu tố): Tăng cường bảo mật đăng nhập bằng cách yêu cầu xác minh hai lớp.
     - SSL/TLS: Quản lý, cài đặt chứng chỉ SSL/TLS để mã hóa kết nối và bảo vệ dữ liệu truyền tải.
     - Security Policy (Chính sách bảo mật): Thiết lập các câu hỏi xác minh cho các truy cập từ IP không xác định.
     - SSL/TLS Status: Kiểm tra trạng thái của chứng chỉ SSL/TLS hiện tại.
-  7. Các ứng dụng phần mềm
+ -  Các ứng dụng phần mềm
     - WordPress Manager by Softaculous: Cài đặt, quản lý và cập nhật WordPress một cách dễ dàng từ giao diện cPanel.
     - Site Software (Phần mềm trang web): Cài đặt các ứng dụng web phổ biến như phần mềm thương mại điện tử và diễn đàn.
     - Optimize Website (Tối ưu hóa trang web): Tối ưu thời gian phản hồi của Web Server Apache để cải thiện tốc độ tải trang.
@@ -67,5 +67,6 @@
    ![](Chup_man_hinh/2025-09-16_06-29.png)
    - Giao diện trang chủ của cPanel:
      ![](Chup_man_hinh/2025-09-16_06-29_1.png)
+
 
 
