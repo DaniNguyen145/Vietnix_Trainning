@@ -97,7 +97,21 @@
  
  - Upload file.zip và giải nén:
      ![](Chup_man_hinh/2025-09-16_09-04.png)
+
  - Tạo Database mới
+     ![](Chup_man_hinh/2025-09-16_10-09.png)
+
+   
+     ![](Chup_man_hinh/2025-09-16_10-12_1.png)
+
+
+     ![](Chup_man_hinh/2025-09-16_10-12.png)
+
+
+     ![](Chup_man_hinh/2025-09-16_10-14.png)
+
+
+     ![](Chup_man_hinh/2025-09-16_10-14_1.png)
 
 
 
