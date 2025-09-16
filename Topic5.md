@@ -13,6 +13,7 @@
     - Thống kê tài nguyên: CPU, RAM, dung lượng ổ cứng, băng thông.
     - Các shortcut: File Manager, Email, Domain, SSL/TLS, Databases.
   
+
 -  Quản lý tập tin
     - File Manager (Trình quản lý file): Cho phép người dùng truy cập, tạo, chỉnh sửa và xóa file trực tiếp trên hosting mà không cần sử dụng FTP.
     - Disk Usage (Theo dõi dung lượng ổ cứng): Cung cấp giao diện trực quan để giám sát và quản lý việc sử dụng dung lượng ổ cứng.
@@ -22,12 +23,14 @@
     - Directory Privacy (Thư mục bảo mật): Tăng cường bảo mật bằng cách đặt mật khẩu cho thư mục.
     - FTP Accounts (Tài khoản FTP): Hỗ trợ quản lý và thêm tài khoản FTP dễ dàng.
 
+
 -  Quản lý cơ sở dữ liệu
     - phpMyAdmin: Giao diện web phổ biến, giúp quản trị cơ sở dữ liệu MySQL một cách trực quan và dễ dàng.
     - Remote Database Access: Cho phép kết nối và truy cập đến cơ sở dữ liệu từ xa, hỗ trợ các ứng dụng trên máy chủ khác sử dụng chung dữ liệu.
     - Manage My Databases: Cung cấp giao diện quản lý toàn diện các cơ sở dữ liệu trên website, bao gồm việc tạo, chỉnh sửa và quản lý tài khoản người dùng cơ sở dữ liệu.
     - Database Wizard: Hỗ trợ tạo và quản lý cơ sở dữ liệu trên cPanel nhanh chóng.
     
+
 -  Quản lý tên miền
     - Site Publisher (Trình xuất bản trang web): Cho phép tạo trang web đơn giản hoặc trang chờ trong khi phát triển website chính.
     - Redirects (Chuyển hướng): Dễ dàng thiết lập chuyển hướng từ URL này sang URL khác.
@@ -37,18 +40,22 @@
     - WordPress Managment (WP Toolkit): Cung cấp các công cụ để cài đặt, cập nhật và quản lý theme, plugin cũng như website WordPress.
     - Domains: Cho phép tạo và quản lý các tên miền phụ (subdomain), tên miền alias và tên miền addon.
 
-  -  Tính năng email
+ 
+ -  Tính năng email
     - Email Accounts (Quản lý tài khoản email): Dễ dàng thiết lập, quản lý và kiểm soát các tài khoản email.
     - Autoresponders (Trả lời tự động): Gửi phản hồi tự động đến các email nhận được, hữu ích cho việc thông báo vắng mặt.
     - Track Delivery (Theo dõi hành trình email): Giám sát quá trình gửi email.
 
-  -  Tính năng bảo mật
+ 
+ -  Tính năng bảo mật
     - SSH Access (Truy cập SSH): Kết nối an toàn đến máy chủ thông qua dòng lệnh.
     - IP Blocker (Trình chặn IP): Chặn truy cập từ các địa chỉ IP cụ thể.
     - Two-Factor Authentication (Xác thực hai yếu tố): Tăng cường bảo mật đăng nhập bằng cách yêu cầu xác minh hai lớp.
     - SSL/TLS: Quản lý, cài đặt chứng chỉ SSL/TLS để mã hóa kết nối và bảo vệ dữ liệu truyền tải.
     - Security Policy (Chính sách bảo mật): Thiết lập các câu hỏi xác minh cho các truy cập từ IP không xác định.
     - SSL/TLS Status: Kiểm tra trạng thái của chứng chỉ SSL/TLS hiện tại.
+ 
+ 
  -  Các ứng dụng phần mềm
     - WordPress Manager by Softaculous: Cài đặt, quản lý và cập nhật WordPress một cách dễ dàng từ giao diện cPanel.
     - Site Software (Phần mềm trang web): Cài đặt các ứng dụng web phổ biến như phần mềm thương mại điện tử và diễn đàn.
@@ -64,15 +71,34 @@
 
 
 ## Move dữ liệu từ VPS sang CPanel
+ - Nén source code trên VPS:
+   ```
+   tar -czvf wp_dian.tar.gz /var/www/wordpress/source_wp
+   ```
+- Xuất cơ sở dữ liệu MySQL:
+  ```
+  mysqldump -u root -p mydatabase > mydatabase.sql
+  ```
+  
  - Truy cập cPanel và đăng nhập tài khoản:
    ![](Chup_man_hinh/2025-09-16_06-29.png)
-   - Giao diện trang chủ của cPanel:
+
+ 
+ - Giao diện trang chủ của cPanel:
      ![](Chup_man_hinh/2025-09-16_06-29_1.png)
-  - Vào FileManager:
+ 
+ 
+ - Vào FileManager:
      ![](Chup_man_hinh/2025-09-16_06-30.png)
-  - Tạo thư mục mới để chứa source code:
+ 
+ 
+ - Tạo thư mục mới để chứa source code:
      ![](Chup_man_hinh/2025-09-16_06-32.png)
  
+ - Upload file.zip và giải nén:
+     ![](Chup_man_hinh/2025-09-16_09-04.png)
+ - Tạo Database mới
+
 
 
 
