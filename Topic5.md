@@ -67,6 +67,12 @@
    ![](Chup_man_hinh/2025-09-16_06-29.png)
    - Giao diện trang chủ của cPanel:
      ![](Chup_man_hinh/2025-09-16_06-29_1.png)
+  - Vào FileManager:
+     ![](Chup_man_hinh/2025-09-16_06-30.png)
+  - Tạo thư mục mới để chứa source code:
+     ![](Chup_man_hinh/2025-09-16_06-32.png)
+ 
+
 
 
 
