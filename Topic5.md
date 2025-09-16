@@ -107,13 +107,17 @@
 
      ![](Chup_man_hinh/2025-09-16_10-12.png)
 
-
+  - Add user và phân quyền:
      ![](Chup_man_hinh/2025-09-16_10-14.png)
 
 
      ![](Chup_man_hinh/2025-09-16_10-14_1.png)
+  -  Import Database và cấu hình lại thông tin truy cập database:
 
+     ![](Chup_man_hinh/2025-09-16_10-21.png)
 
+     
+     ![](Chup_man_hinh/2025-09-16_11-18.png)
 
 
 
