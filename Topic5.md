@@ -99,7 +99,9 @@
      ![](Chup_man_hinh/2025-09-16_09-04.png)
 
  - Tạo Database mới
-     ![](Chup_man_hinh/2025-09-16_10-09.png)
+ 
+
+   ![](Chup_man_hinh/2025-09-16_10-09.png)
 
    
      ![](Chup_man_hinh/2025-09-16_10-12_1.png)
@@ -108,29 +110,43 @@
      ![](Chup_man_hinh/2025-09-16_10-12.png)
 
   - Thêm user và phân quyền:
-     ![](Chup_man_hinh/2025-09-16_10-14.png)
+ 
 
-
+    ![](Chup_man_hinh/2025-09-16_10-14.png)
      ![](Chup_man_hinh/2025-09-16_10-14_1.png)
+ 
+ 
  -  Import Database và cấu hình lại thông tin truy cập database:
+
 
      ![](Chup_man_hinh/2025-09-16_10-21.png)
 
      
      ![](Chup_man_hinh/2025-09-16_11-18.png)
+
+
 -   Cài đặt SSL cho domain:
-     ![](Chup_man_hinh/2025-09-17_08-33.png)
-    
+
+
+    ![](Chup_man_hinh/2025-09-17_08-33.png)
      ![](Chup_man_hinh/2025-09-17_08-45.png)
+  
+  
   - Chọn Domain và điền các chứng chỉ SSL
+
+
      ![](Chup_man_hinh/2025-09-17_08-45_1.png)
+
+    
   - Vào SSL Status để kiểm tra lại:
+
+    
      ![](Chup_man_hinh/2025-09-17_08-34.png)
+
     
      ![](Chup_man_hinh/2025-09-17_08-50.png)
 
-
-
+- Người dùng tiến hành copy các file `.crt`, `.key` tương ứng vào. Sau khi Install thì trang web sẽ được áp dụng SSL. Kiểm tra Dùng lệnh `curl` để kiểm tra xem trang web hoạt động bình thường. Ngoài ra, có thể dùng thêm lệnh `nslookup` để xem domain có trỏ về đúng địa chỉ không
 
 
 
