@@ -11,6 +11,6 @@
     
     - Sau khi cài xong màn hình sẽ hiển thị đường dẫn và thông tin để đăng nhập vào AAPanel:
     
-        ![](Chup_man_hinh/2025-09-16_14-56.png)
+   ![](Chup_man_hinh/2025-09-16_14-56.png)
         
-## 
+## Tạo website wordpress trên AAPanel
