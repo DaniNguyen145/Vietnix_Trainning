@@ -107,18 +107,28 @@
 
      ![](Chup_man_hinh/2025-09-16_10-12.png)
 
-  - Add user và phân quyền:
+  - Thêm user và phân quyền:
      ![](Chup_man_hinh/2025-09-16_10-14.png)
 
 
      ![](Chup_man_hinh/2025-09-16_10-14_1.png)
-  -  Import Database và cấu hình lại thông tin truy cập database:
+ -  Import Database và cấu hình lại thông tin truy cập database:
 
      ![](Chup_man_hinh/2025-09-16_10-21.png)
 
      
      ![](Chup_man_hinh/2025-09-16_11-18.png)
-- 
+-   Cài đặt SSL cho domain:
+     ![](Chup_man_hinh/2025-09-17_08-33.png)
+    
+     ![](Chup_man_hinh/2025-09-17_08-45.png)
+  - Chọn Domain và điền các chứng chỉ SSL
+     ![](Chup_man_hinh/2025-09-17_08-45_1.png)
+  - Vào SSL Status để kiểm tra lại:
+     ![](Chup_man_hinh/2025-09-17_08-34.png)
+    
+     ![](Chup_man_hinh/2025-09-17_08-50.png)
+
 
 
 
