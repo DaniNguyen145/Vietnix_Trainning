@@ -148,5 +148,6 @@
 
 - Người dùng tiến hành copy các file `.crt`, `.key` tương ứng vào. Sau khi Install thì trang web sẽ được áp dụng SSL. Kiểm tra Dùng lệnh `curl` để kiểm tra xem trang web hoạt động bình thường. Ngoài ra, có thể dùng thêm lệnh `nslookup` để xem domain có trỏ về đúng địa chỉ không
 
+    ![](Chup_man_hinh/2025-09-17_08-54.png)
 
 
