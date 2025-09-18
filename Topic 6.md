@@ -41,3 +41,7 @@
   - Nhập các thông tin cần thiết:
    ![](Chup_man_hinh/2025-09-17_16-28.png)
    ![](Chup_man_hinh/2025-09-17_10-43.png)
+- Cấu hình lại file config và .env cho 2 website:
+  - .env:
+    ![](Chup_man_hinh/2025-09-18_12-04.png)
+    ![](Chup_man_hinh/2025-09-18_12-04_1.png)
