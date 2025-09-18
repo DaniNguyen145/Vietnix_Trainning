@@ -54,7 +54,7 @@
     ![](Chup_man_hinh/2025-09-18_13-58.png)
 ## WP-Optimize - Cache và LiteSpeed Cache
 - WP-Optimize – Cache
-        ![](Chup_man_hinh/\.png)
+        ![](Chup_man_hinh/123.png)
     
     - Mục đích chính
         - Tối ưu và dọn dẹp cơ sở dữ liệu WordPress (xóa bản revision, spam, transient…).
