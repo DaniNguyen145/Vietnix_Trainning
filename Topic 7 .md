@@ -44,4 +44,46 @@
     
     ![](Chup_man_hinh/2025-09-19_07-28.png)
 ## Proxy pass
+  - Tạo tài khoản và mật khẩu OpenLiteSpeed
+    ```
+      cd  /usr/local/lsws/admin/misc/admpass.sh
+    ```
+    ![](Chup_man_hinh/2025-09-19_10-00.png)
+  - Truy cập OpenLiteSpeed: https:/<IP_VPS>/7080 và đăng nhập
+    ![](Chup_man_hinh/2025-09-19_16-17.png)
+    
+  - Tạo app proxy trên port 5000:
+    ![](Chup_man_hinh/2025-09-19_16-20.png)
+    ![](Chup_man_hinh/2025-09-19_16-21.png)
 
+
+    - Tạo app flask cơ bản:
+      ```
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install flask
+      ```
+    - Tạo file app.py
+      ```
+      nano app.py
+      ```
+      Copy nội dung file
+      ```
+        from flask import Flask
+
+        app = Flask(__name__)
+        
+        @app.route("/")
+        def hello():
+            return "Hello Flask on port 5000!"
+        
+        if __name__ == "__main__":
+            # 0.0.0.0 để lắng nghe mọi IP
+            app.run(host="0.0.0.0", port=5000, debug=True)
+
+       ```
+      - Chạy app và truy cập vào http://<server_ip>:5000 :
+        ```
+        python app.py
+        ```
+        ![](Chup_man_hinh/2025-09-19_16-02.png)
