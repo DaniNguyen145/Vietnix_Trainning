@@ -5,7 +5,7 @@
     sh <(curl https://cyberpanel.net/install.sh || wget - O - https://cyberpanel.net/install.sh)
     ```
   - Sau khi caì đặt, đường dẫn và thông tin đăng nhập của CyberPanel sẽ hiển thị trên màn hình:
-
+    ![](Chup_man_hinh/2025-09-19_20-54.png)
 
   - Truy cập đường dẫn và đăng nhập vào CyberPanel
     ![](Chup_man_hinh/2025-09-19_01-16.png)
@@ -87,3 +87,6 @@
         python app.py
         ```
         ![](Chup_man_hinh/2025-09-19_16-02.png)
+
+        
+
