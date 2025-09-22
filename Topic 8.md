@@ -8,7 +8,7 @@
 ![](Chup_man_hinh/2025-09-22_11-18.png)
 - Sau khi cài đặt thành công sẽ hiện thông tin tài khoản và mật khẩu để đăng nhập
 
-![](Chup_man_hinh/2025-09-22_11-55.png)
+![](Chup_man_hinh/2025-09-20_11-55.png)
 
 - Truy cập vào trình duyệt tại https://103.90.226.77:8083, đăng nhập bằng tài khoản vừa được tạo sau khi cài đặt.
 
@@ -37,3 +37,4 @@
 - Truy cập website để kiểm thử web.
 
 ![alt text](./image-topic8/image-16.png)
+
