@@ -39,6 +39,8 @@
 - Truy cập website để kiểm thử web.
 
 ![alt text](Chup_man_hinh/2025-09-22_10-44.png)
+![](Chup_man_hinh/image.png)
+
 
 
 
