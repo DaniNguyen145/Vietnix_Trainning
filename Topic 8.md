@@ -41,6 +41,9 @@
 ![alt text](Chup_man_hinh/2025-09-22_10-44.png)
 ![](Chup_man_hinh/image.png)
 
+- Command line để cài ssl free trong vestacp và đường dẫn chứa các file cert SSL:
+![](Chup_man_hinh/2025-09-24_11-21-24.png)
+
 
 
 
