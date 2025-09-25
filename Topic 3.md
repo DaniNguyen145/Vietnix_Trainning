@@ -46,7 +46,7 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
         
     ```
 - Bây giờ bạn hãy truy cập IP trên trình duyệt. Nếu hiện như ảnh bên dưới là đã cài Nginx thành công.
-  ![Đăng nhập Nginx thành công](/Chụp%20màn%20hình/2025-09-11_08-50.png)
+  ![Đăng nhập Nginx thành công](/Chup_man_hinh/2025-09-11_08-50.png)
 	
 ### 4. Cài đặt MariaDB trên VPS:
 - Cài đặt MariaDB:
