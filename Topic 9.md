@@ -45,6 +45,6 @@
 ![](Chup_man_hinh/2025-09-25_09-34.png)
 ## Cài đặt SQL Server: 2016
 - Truy cập đường dẫn này "Link download: https://software.vietnix.tech/datastore/sources/SQL_Server/sql2016/" và tải về file .iso:
-  ![](Chup_man_hinh/2025-09-25_11-50.png)
+  ![](Chup_man_hinh/2025-09-25_10-50.png)
 - Sau đó Mount và set up SQL Server:
   ![](Chup_man_hinh/2025-09-25_11-10.png)
