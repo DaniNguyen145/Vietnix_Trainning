@@ -256,10 +256,10 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     ```
 - Sau đó truy cập vào đường dẫn : http://wp.dian.vietnix.tech/ sẽ hiện giao diện của Wordpress. 
 
-  ![Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-20.png)
+  ![Giao diện Wordpress](/Chup_man_hinh/2025-09-11_11-20.png)
 - Chọn ngôn ngữ và nhập thông tin chi tiết. 
 
-  ![Giao diện Wordpress](/Chụp%20màn%20hình/2025-09-11_11-35.png)
+  ![Giao diện Wordpress](/Chup_man_hinh/2025-09-11_11-35.png)
 #### 2. Cài đặt Laravel:
 - Cài đặt Composer: 
     ```
@@ -317,25 +317,25 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
     echo "<?php phpinfo();" > /var/www/laravel/public/info.php
 	```
 - Truy cập vào trang thử:'http://laravel.dian.vietnix.tech/info.php'
-    ![Giao diện thử lavarel](/hChụp%20màn%20hình/2025-09-11_14-34.png)
+    ![Giao diện thử lavarel](/Chup_man_hinh/2025-09-11_14-34.png)
     
     Nếu thấy có thông tin php thì chứng tỏ website laravel đã hoạt động.
 
 - Bạn có thể truy cập vào trang lavarel của bạn:'http://laravel.dian.vietnix.tech/'
-    ![Giao diện lavarel](/Chụp%20màn%20hình/2025-09-11_14-21.png)
+    ![Giao diện lavarel](/Chup_man_hinh/2025-09-11_14-21.png)
 
 # II.Cài SSL cho 2 domain với ZeroSSL
 - Truy cập vào'https://www.sslforfree.com/' để đăng ký tài khoản.
-    ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_14-51.png)
+    ![Giao diện ZeroSSL](/Chup_man_hinh/2025-09-11_14-51.png)
 - Tạo Certificate mới cho SSL:
  
-    ![Giao diện ZeroSSL](/Chụp%20màn%20hình/2025-09-11_15-00.png)
+    ![Giao diện ZeroSSL](/Chup_man_hinh/2025-09-11_15-00.png)
 - Xác thực tên miền bằng cách upload file: 
-    ![Giao diện xác thực](/Chụp%20màn%20hình/1.png)
+    ![Giao diện xác thực](/Chup_man_hinh/1.png)
 - Làm theo hướng dẫn và tải file chứng chỉ:
-    ![Giao diện xác thực](/Chụp%20màn%20hình/2025-09-11_15-20.png)
+    ![Giao diện xác thực](/Chup_man_hinh/2025-09-11_15-20.png)
 - Giải nén file và tạo thư mục lưu chứng chỉ:
-    ![Giao diện](/Chụp%20màn%20hình/2025-09-11_15-24.png)
+    ![Giao diện](/Chup_man_hinh/2025-09-11_15-24.png)
     ```
     mkdir -p /etc/nginx/ssl/laravel
     ```
@@ -390,10 +390,10 @@ LEMP Stack là một bộ công nghệ mã nguồn mở bao gồm các thành ph
   ```
 - Hãy truy cập lại trang và kiểm tra
  
-![Giao diện Laravel](/Chụp%20màn%20hình/2025-09-12_06-47.png)
+![Giao diện Laravel](/Chup_man_hinh/2025-09-12_06-47.png)
 
 ______________________________
-![Giao diện WordPres](/Chụp%20màn%20hình/2025-09-12_06-47_1.png)
+![Giao diện WordPres](/Chup_man_hinh/2025-09-12_06-47_1.png)
 
 ## III.Tạo tài khoản FTP
 - Cập nhật và cài đặt FTP:
@@ -425,4 +425,4 @@ ______________________________
    ```
 - Dùng FileZilla hoặc WinSCP, để kiểm tra:
 
- 	![Giao diện FileZilla](/Chụp%20màn%20hình/2025-09-12_08-32-10.png)
+ 	![Giao diện FileZilla](/Chup_man_hinh/2025-09-12_08-32-10.png)
