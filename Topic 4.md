@@ -35,7 +35,7 @@
     ```
     ```
         ● apache2.service - The Apache HTTP Server
-         Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor>
+         Loaded: running (/lib/systemd/system/apache2.service; enabled; vendor>
          Active: active (running) since Fri 2025-09-12 11:22:20 +07; 3h 55min>
            Docs: https://httpd.apache.org/docs/2.4/
         Process: 168386 ExecStart=/usr/sbin/apachectl start (code=exited, sta>
