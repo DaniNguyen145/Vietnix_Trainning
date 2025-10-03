@@ -1,7 +1,7 @@
 # 1. SSL là gì ?
 - Là một tiêu chuẩn của công nghệ bảo mật, truyền thông mã hóa giữa trình duyệt và máy chủ web server.
 - SSL hoạt động và đảm bảo rằng những dữ liệu được truyền tải giữa máy chủ và trình duyệt đều được toàn vẹn, riêng tư và bảo mật.
-## 2. Các cách xác thực SSL
+# 2. Các cách xác thực SSL
 - Domain Validation – DV SSL
     - Chứng chỉ xác thực tên miền dành cho các website cá nhân với khả năng mã hóa cơ bản.
     - Chỉ yêu cầu xác minh quyền sở hữu của tên miền.
@@ -9,7 +9,7 @@
         - Xác thực qua email, cần tạo email dạng admin@domain để nhận mail apppoval từ phía SSL.
         - Xác thực qua DNS, cấu hình 1 bản ghi theo yêu cầu từ phía SSL.
         - Xác thực qua File Base, người dùng sẽ nhận được nội dung của file xác thực kèm đường dẫn để người dùng khởi tạo file theo đường dẫn được cung cấp trên server / hosting người dùng.
-- **Organization Validation – OV SSL**
+- Organization Validation – OV SSL
     - Chứng chỉ xác thực dành cho các tổ chức và doanh nghiệp có độ tin cậy cao.
     - Xác thực bao gồm việc xác minh quyền sở hữu tên miền, xác minh doanh nghiệp đăng ký đang tồn tại và hoạt động bình thường.
     - Tên doanh nghiệp cũng sẽ được hiển thị chi tiết trên chứng chỉ OV được cấp.
