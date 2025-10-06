@@ -174,20 +174,20 @@
 ## V. Linux Command Line
 ### Ping và Hping3
 #### Ping
-![alt text](image.png)
+![alt text]()
 - Giải thích
     - `ttl=` là số hop (router) gói tin đi qua còn lại trước khi bị hủy. Giá trị càng cao nghĩa là gói chưa qua nhiều hop.
     - `time=` độ trễ (round-trip time) từ máy nguồn đến đích và ngược lại.
 
 #### Hping3
-![alt text](./image/image-2.png)
+![alt text]()
 - Giải thích
     - hping3 mặc định gửi gói TCP, không phải ICMP.
     - Server không phản hồi loại gói này → 100% packet loss.
     - round-trip = 0.0 ms vì không có phản hồi nào.
     - Không đồng nghĩa với server "chết", chỉ là server không phản hồi gói tin này.
 
-![alt text](./image/image-1.png)   
+![alt text]()   
 - Giải thích
     - len: độ dài gói ICMP.
     - ip: địa chỉ IP đích phản hồi.
@@ -213,19 +213,19 @@
     ```
     
 - Kết nối bằng port custom
-    ```bash
+    ```
     ssh -i ~/.ssh/id_rsa -p 2222 chien@192.168.1.100 ## 2222 là port tùy chỉnh so với port gốc 22 của SSH 
     ```
 
 ### SCP Command
 + Copy một file:
-    ```bash
+    ```
     scp file.txt user@remote:/path/to/destination/        # copy file từ local lên remote
     scp user@remote:/path/to/file.txt /local/path/        # copy file từ remote về local
     ```
 
 + Copy một folder:
-    ```bash
+    ```
     scp -r folder/ user@remote:/path/to/destination/      # copy folder từ local lên remote
     scp -r user@remote:/path/to/folder/ /local/path/      # copy folder từ remote về local
     ```
@@ -239,36 +239,36 @@
     ```
 
 + Copy folder:
-    ```bash
+    ```
     rsync -av folder/ user@remote:/path/to/destination/   # copy folder với rsync
     ```
 
 + `rsync incremental`:
-    ```bash
+    ```
     rsync -av --progress /source/ /destination/           # chỉ copy phần thay đổi (incremental)
     rsync -avz /source/ user@remote:/path/to/destination/ # incremental qua SSH
     ```
 
 ### Cat Command
 + Xem nội dung 1 file:
-    ```bash
+    ```
     cat file.txt
     ```
 
 + Xem dòng thứ `<n>` trong file:
-    ```bash
+    ```
     sed -n '<n>p' file.txt
     ```
-![alt text](./image/image-8.png)
+![alt text]()
 + Ghi nhiều dòng vào 1 file bằng EOF:
-    ```bash
+    ```
     cat <<EOF > file.txt
     line 1
     line 2
     line 3
     EOF
     ```
-![alt text](./image/image-9.png)
+![alt text]()
 
 ### Echo Command:
 + Chèn thêm 1 dòng vào cuối file:
@@ -279,7 +279,7 @@
     ```bash
     echo "Content" > file.txt
     ```
-![alt text](./image/image-10.png)
+![alt text]()
 
 ### Tail/Head Command:
 + Sự khác biệt giữa `tail` và `head`.
@@ -310,7 +310,7 @@
         - -i: ghi đè trực tiếp vào file.txt
 
 ### Traceroute/Tracert Command:
-![alt text](./image/image-19.png)
+![alt text]()
 + Giải thích: Kết quả traceroute vietnix.vn cho thấy đường đi của gói tin từ máy khách đến server vietnix.vn (IP 103.90.224.90), với tối đa 30 hop và gói tin 60 bytes. Giải thích từng phần:
     - Hop 1: Là router/gateway tại mạng LAN, Thời gian hiển thị 3 lần đo round-trip time (ms) cho từng gói.
     - Hop 2: Hiển thị ISP hoặc router trung gian
@@ -345,39 +345,39 @@
     ```
 
 + Chỉ hiển thị socket TCP:
-    ```bash
+    ```
     netstat -t
     ```
 
 + Chỉ hiển thị socket UDP:
-    ```bash
+    ```
     netstat -u
     ```
 ### Sort Command:
 + Theo thứ tự tăng dần.
-    ```bash
+    ```
     sort file.txt
     ```
 + Theo thứ tự giảm dần.
-    ```bash
+    ```
     sort -r file.txt
     ```
 + Theo column.
-    ```bash
+    ```
     sort -k <column_number> file.txt
     ```
-![alt text](./image/image-12.png)
+![alt text]()
 
 ### Uniq Command:
 + Lọc các dòng lặp lại.
-```bash
+```
 uniq file.txt
 ```
 + Lọc và đếm số lượng dòng lặp lại.
-```bash
+```
 uniq -c file.txt
 ```
-![alt text](./image/image-13.png)
+![alt text]()
 
 ### Wc Command:
 + Đếm số dòng:
@@ -388,7 +388,7 @@ uniq -c file.txt
     ```bash
     wc -m file.txt
     ```
-![alt text](./image/image-11.png)
+![alt text]()
 
 ### Chmod, Chown, Chattr Command:
 + Phân quyền bằng số (octal) hoặc chữ (symbolic):
@@ -477,7 +477,7 @@ uniq -c file.txt
     echo "abcdef" | cut -c -<n>
     ```
 
-![alt text](./image/image-7.png)
+![alt text]()
 
 ### Dig Command:
 + Kiểm tra record A, MX, NS:
@@ -547,9 +547,9 @@ uniq -c file.txt
     - Hard link và file gốc chia sẻ cùng inode, nên nếu file gốc bị xóa, dữ liệu vẫn tồn tại thông qua hard link.
 + Ví dụ về Sym Link và Hard Link.
 
-![alt text](./image/image-18.png)
+![alt text]()
 
-![alt text](./image/image-17.png)
+![alt text]()
 
 
 ### Ls Command:
@@ -565,7 +565,7 @@ uniq -c file.txt
 ```bash
     ls -a
 ```
-![alt text](./image/image-14.png)
+![alt text]()
 
 ### Ps Command:
 + Show tiến trình: Hiển thị tất cả tiến trình đang chạy sử dụng lệnh:
@@ -585,7 +585,7 @@ uniq -c file.txt
         ```
 
 ### Top Command:
-![alt text](./image/image-5.png)
+![alt text]()
 - Giải thích các thông số.
     - Phần trên cùng:
         + Load average: mức tải CPU trong 1, 5, 15 phút.
@@ -607,7 +607,7 @@ uniq -c file.txt
 ### Free Command:
 - Giải thích các thông số về RAM:
 
-    ![alt text](./image/image-4.png)
+    ![alt text]()
     + total: tổng dung lượng RAM.
     + used: RAM đang được sử dụng.
     + free: RAM chưa dùng.
@@ -621,7 +621,7 @@ uniq -c file.txt
     ```bash
     df -h
     ```
-    ![alt text](./image/image-3.png)
+    ![alt text]()
     - Filesystem: Tên của hệ thống file (vị trí lưu trữ dữ liệu trên ổ đĩa).
     - Size: Tổng dung lượng của hệ thống file.
     - Used: Dung lượng đã sử dụng.
