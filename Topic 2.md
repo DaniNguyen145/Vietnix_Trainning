@@ -75,11 +75,11 @@
 - Là file mã hoá được sinh ra cùng lúc khi tạo CSR.
 - Đóng vai trò xác thực máy chủ và giải mã dữ liệu.
 #   7. PFX file
-##  Khái niệm
+#  Khái niệm
 - Là một loại tệp định dạng khóa cá nhân chứng thực (certificate) trong hệ thống Windows. 
 - Chứa cả chứng thực số và khóa riêng tư được mã hóa.
 - Cung cấp thông tin bảo mật cho các kết nối an toàn như HTTPS (HTTP Secure), SMTPS (SMTP Secure), và các dịch vụ khác.
-##   Cách chuyển dổi tử  CRT sang PFX
+#   Cách chuyển dổi tử  CRT sang PFX
 - Trường hợp 1: Có CRT, CA Bundle và Private Key
     ``` 
     openssl pkcs12 -export \
@@ -104,7 +104,7 @@
     - OpenSSL sẽ yêu cầu nhập Export Password : mật khẩu này dùng khi import file .pfx vào hệ thống
     - File .pfx sẽ chứa: chứng chỉ (CRT) + private key + (tùy chọn) CA chain
 
-## Domain
+# Domain
 #   1. Khái niệm
 - Là một chuỗi ký tự dễ nhớ, được sử dụng để xác định một địa chỉ trên Internet.
 - Giúp người dùng dễ dàng tìm thấy, ghi nhớ và truy cập website.
@@ -130,24 +130,24 @@
 - Là một tính năng trong web server và cũng là một phương thức lưu trữ.
 - Cho phép nhiều trang web hoặc tên miền hoạt động trên cùng một máy chủ vật lý hoặc một địa chỉ IP duy nhất
 
-## Mail Server
+# Mail Server
 #   1. MX Record
 - Là một bản ghi (Record) trong DNS, thực hiện định vị máy chủ mail cho tên miền.
 - Với mỗi tên miền, người dùng có thể gán nhiều MX record.
 - Dù email tạm thời bị gián đoạn hoặc không hoạt động trong một thời gian, nhưng dữ liệu vẫn không hề bị mất.
 #   2. DKIM, SPF, PTR
-#  # DKIM
+##   DKIM
 - Một phương thức giúp xác nhận Email thông qua chữ ký số giúp tránh và chặn  email giả mạo, lừa đảo, mã độc.
 - Email gửi đi sẽ được gắn chữ ký điện tử liên kết với tên miền; người nhận xác minh bằng cách tra cứu khóa công khai (Public Key) trong DNS.
-#  # SPF
+##   SPF
 - Cơ chế xác thực email giúp phát hiện và ngăn chặn email giả mạo. 
 - Là một bản ghi TXT được khai báo trong DNS, giúp hệ thống nhận email xác minh địa chỉ IP của máy chủ gửi có hợp lệ hay không.
-#  # PTR
+##   PTR
 - Là một loại bản ghi DNS có tác dụng trỏ một địa chỉ IP đến một tên miền.
 - Đáp ứng yêu cầu reverse DNS lookup trước khi nhận email.
 - Tăng độ tin cậy của server: (hỗ trợ cho outgoing mail server).
 
-## DNS
+# DNS
 #   Khái niệm
 - Là hệ thống phân giải tên miền.
 - Cho phép thiết lập tương ứng giữa địa chỉ IP và tên miền trên Internet.
@@ -171,7 +171,7 @@
 - **Recursive DNS Server nhận địa chỉ IP**: Được cung cấp địa chỉ IP, Recursive DNS Server trả về thông tin cho trình duyệt và cập nhật bộ nhớ đệm.
 - **Trình duyệt kết nối đến máy chủ web**: Trình duyệt sử dụng địa chỉ IP để kết nối đến máy chủ web và tải trang web.
 
-## Linux Command Line
+# Linux Command Line
 #   Ping và Hping3
 #  # Ping
   
@@ -214,7 +214,7 @@
     
 - Kết nối bằng port custom
     ```
-    ssh -i ~/.ssh/id_rsa -p 2222 chien@192.168.1.100 ## 2222 là port tùy chỉnh so với port gốc 22 của SSH 
+    ssh -i ~/.ssh/id_rsa -p 2222 chien@192.168.1.100 # 2222 là port tùy chỉnh so với port gốc 22 của SSH 
     ```
 
 #   SCP Command
@@ -466,7 +466,7 @@ uniq -c file.txt
 #   Cut Command:
 + Lấy ký tự thứ `<n>`.
     ``` 
-    echo "abcdef" | cut -c <n> ## n là STT ký tự muốn lấy
+    echo "abcdef" | cut -c <n> # n là STT ký tự muốn lấy
     ```
 + Lấy từ ký tự `<n>` trở về sau.
     ``` 
@@ -570,13 +570,13 @@ uniq -c file.txt
 + Kill tiến trình: 
     + Kill tiến trình theo ID:
         ``` 
-        kill <PID> ## với PID là ID của tiến trình
+        kill <PID> # với PID là ID của tiến trình
         ```
 
     + Kill tiến trình theo tên:
 
         ``` 
-        pkill <process_name> ## với process_name là tên tiến trình
+        pkill <process_name> # với process_name là tên tiến trình
         ```
 
 #   Top Command:
