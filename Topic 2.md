@@ -211,11 +211,7 @@
     ``` 
     ssh -i /path/to/private_key username@hostname
     ```
-    
-- Kết nối bằng port custom
-    ```
-    ssh -i ~/.ssh/id_rsa -p 2222 chien@192.168.1.100 # 2222 là port tùy chỉnh so với port gốc 22 của SSH 
-    ```
+
 
 #   SCP Command
 + Copy một file:
